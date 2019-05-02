@@ -1,0 +1,30 @@
+<div class="container pad-top">
+  <a ui-sref="newStock" class="btn btn-primary" style="float: right;"><h3>Add New Stock</h3></a>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1>All Stocks</h1>
+  <br>
+  <table class="table stocktable">
+      
+      <tr>   
+          <td>Stock ID</td>
+          <td>Name</td>
+          <td>Current Price( $ )</td>
+          <td>Last Updated</td>
+          <td>Action</td>
+      </tr>
+      <tr ng-repeat="stock in stocks">
+          <td>{{stock.id}}</td>
+          <td>{{stock.name}}</td>
+          <td>{{stock.currentPrice}}</td>
+          <td>{{stock.lastUpdate}}</td>
+          <td>
+              <a class="btn btn-info" ui-sref="viewStock({id:stock.id})">View</a> 
+           	  <a class="btn btn-warning" ui-sref="editStock({id:stock.id})">Edit</a> 
+              <a class="btn btn-danger" ui-sref="deleteStock({id:stock.id})">Delete</a>           
+          </td>
+      </tr>
+  </table>
+</div>
