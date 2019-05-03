@@ -21,10 +21,10 @@ public class StockRepositoryImpl implements StockRepository {
 		this.stocks = StocksFactory.getStocks();
 	}
 
-	private static int count = 0;
+	private static AtomicInteger count = new AtomicInteger(0);
 
 	public void save(Stock stock) {
-		stock.setId(++count);
+		stock.setId(count.incrementAndGet());
 		stocks.put(stock.getId(), stock);
 	}
 
