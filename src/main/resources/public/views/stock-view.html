@@ -1,0 +1,36 @@
+<div class="container pad-top">
+  <table class="table stocktable">
+      <tr>
+          <td><h2>Stock details for {{stock.name}}</h2></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>Stock ID</td>
+          <td>{{stock.id}}</td>
+      </tr>
+      <tr>
+          <td>Name</td>
+          <td>{{stock.name}}</td>
+      </tr>
+      <tr>
+          <td>Current Price</td>
+          <td>{{stock.currentPrice}}</td>
+      </tr>
+      <tr>
+          <td>Last Updated</td>
+          <td>{{stock.lastUpdate}}</td>
+      </tr>
+      <tr>
+          <td>
+         	 <div>
+     			 <a class="btn btn-warning" ui-sref="editStock({id:stock.id})">Edit</a>
+ 			 </div>
+ 		  </td>
+ 		  <td>
+         	 <div>
+     			 <a class="btn btn-danger" ui-sref="deleteStock({id:stock.id})">Delete</a>
+ 			 </div>
+ 		  </td>
+      </tr>
+  </table>  
+</div>
